@@ -1,2 +1,4 @@
 # cs-sistemas
-notas de estudiante
+Notas de estudiante.
+
+Se prioriza la compatibilidad.
