@@ -1,8 +1,8 @@
-# dwm - administrador de ventanas dinamico de suckless.org
+# dwm - administrador de ventanas dinámico de suckless.org
 
 https://dwm.suckless.org
 
-### version: 2020-03-03 22:23
+### versión: 2020-03-03 22:23
 
 https://git.suckless.org/dwm/log.html
 
