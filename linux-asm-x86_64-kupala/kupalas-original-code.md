@@ -3,7 +3,7 @@
 Written in his videos
 
 
-
+-----
 ### hello world
 
 <div><ol class="asm"><li class="li1"><div class="de1"><span class="kw5">section</span> <span class="kw5">.data</span></div></li>
@@ -24,6 +24,7 @@ Written in his videos
 <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="kw1">syscall</span></div></li>
 </ol></div>
 
+-----
 ### Getting user input
 
 <div><ol class="asm"><li class="li1"><div class="de1"><span class="kw5">section</span> <span class="kw5">.data</span></div></li>
@@ -79,3 +80,4 @@ Written in his videos
 <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="kw1">ret</span></div></li>
 </ol></div>
 
+-----
