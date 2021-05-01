@@ -1,4 +1,6 @@
-# dwm - administrador de ventanas dinámico de suckless.org
+# dwm - dynamic window manager
+
+administrador de ventanas dinámico de suckless.org
 
 https://dwm.suckless.org
 
