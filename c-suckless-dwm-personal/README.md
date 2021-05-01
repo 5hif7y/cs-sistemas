@@ -1,7 +1,10 @@
 # dwm - administrador de ventanas dinamico de suckless.org
-https://git.suckless.org/dwm/log.html
+
+https://dwm.suckless.org
 
 ### version: 2020-03-03 22:23
+
+https://git.suckless.org/dwm/log.html
 
 ### parches: dwm-systray-20200914-61bb8b2.diff y dwm-fibonacci-20200418-c82db69.diff
 
