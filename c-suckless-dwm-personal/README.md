@@ -12,6 +12,8 @@ https://dwm.suckless.org/patches/systray/dwm-systray-20200914-61bb8b2.diff
 
 https://dwm.suckless.org/patches/fibonacci/dwm-fibonacci-20200418-c82db69.diff
 
+![Captura](captura.png)
+
 -------------------------------------------------------------------------------------
 README ORIGINAL:
 
