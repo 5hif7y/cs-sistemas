@@ -1,3 +1,16 @@
+# dwm - administrador de ventanas dinamico de suckless.org
+https://git.suckless.org/dwm/log.html
+
+### version: 2020-03-03 22:23
+
+### parches: dwm-systray-20200914-61bb8b2.diff y dwm-fibonacci-20200418-c82db69.diff
+
+https://dwm.suckless.org/patches/systray/dwm-systray-20200914-61bb8b2.diff
+https://dwm.suckless.org/patches/fibonacci/dwm-fibonacci-20200418-c82db69.diff
+
+
+README ORIGINAL:
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
