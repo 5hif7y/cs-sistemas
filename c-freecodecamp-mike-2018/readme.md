@@ -67,25 +67,26 @@ Todo funciona bien, pero se rompe el código al momento de pedir que el usuario 
 ### Ejemplo 25: editar archivos
 
 * El primer programa "**25-editar-archivos-A.c**" crea un archivo "25-empleados.txt" y le imprime el siguiente contenido:
-
+  ```
   Juan, Ventas.
   Pamela, Administración.
   Oscar, Contaduría.
+  ```
 
 
 
 * El segundo programa "**25-editar-archivos-B.c**" adjunta información al archivo "25-empleados.txt" y le imprime el siguiente contenido:
-
-  Katia, Servicio al cliente.
+  ```Katia, Servicio al cliente.```
 
 
 
 * El .txt al final, después de pasar por las modificaciones de ambos programas, debe dar este contenido:
-
+  ```
   Juan, Ventas.
   Pamela, Administración.
   Oscar, Contaduría.
   Katia, Servicio al cliente.
+  ````
 
 ### Ejemplo 26: leer archivos
 
