@@ -8,17 +8,17 @@ Linux ya lo trae por defecto, saludos.
 
 1. Descargar el instalador en: https://www.msys2.org/
 
-![image-20210413213532633](instalacion-compatible.assets/image-20210413213532633.png)
+![image-20210413213532633](readme.assets/image-20210413213532633.png)
 
 2. Abrir el instalador. MSYS2 requiere "Windows 7 64 bit" o mas nuevo.
 
 3. Dejar por default o elegir una **Carpeta de instalación** 
 
-   ![Second screen of MSYS2 installation](instalacion-compatible.assets/install-2-path.png)
+   ![Second screen of MSYS2 installation](readme.assets/install-2-path.png)
 
 4. Cuando termine, seleccionar **Run MSYS2 now**.
 
-   ![Third screen of MSYS2 installation](instalacion-compatible.assets/install-3-finish.png)
+   ![Third screen of MSYS2 installation](readme.assets/install-3-finish.png)
 
 5. Actualizar los paquetes y la base de datos, ejecutar, cuando termine apretar la tecla **Y** para confirmar la actualización.
     `pacman -Syu`:
@@ -69,7 +69,7 @@ Linux ya lo trae por defecto, saludos.
    ```
 
 6. Arrancar "**MSYS2 MSYS**" desde el menú de inicio con el logo de Windows que esta a la izquierda. 
-   ![image-20210429142121396](instalacion-compatible.assets/image-20210429142121396.png)
+   ![image-20210429142121396](readme.assets/image-20210429142121396.png)
 
 7. **Actualizar el resto** de los paquetes con 
    `pacman -Su`:
@@ -140,7 +140,7 @@ Linux ya lo trae por defecto, saludos.
 
 10. **Entender el editor de texto**, yo tengo preferencia por **vim**, por la cantidad de horas que puede ahorrar, pero tiene una curva de aprendizaje muy alta. También pueden usar **nano** que ya viene instalado por defecto.
 
-    ![image-20210429151601673](instalacion-compatible.assets/image-20210429151601673.png)![image-20210429151746057](instalacion-compatible.assets/image-20210429151746057.png)
+    ![image-20210429151601673](readme.assets/image-20210429151601673.png)![image-20210429151746057](readme.assets/image-20210429151746057.png)
     Se escribe y borra como en cualquier editor de texto, como el block de notas, se guarda con **Control + O**, se cancela con **Control + C** y se sale con **Control + X**, pero como ya te habrás dado cuenta, nano viene con las instrucciones impresas abajo de todo donde **^ significa Control**.
     
 11. **Configurar la shell**: la shell que vamos a usar es **bash** y para poder configurarla vamos a editar nuestro archivo de configuración **.bashrc** (si, el nombre comienza con un punto y tiene una razón; la mayoría de archivos de configuración empiezan con un punto y de denominan "**dotfiles**", archivos de punto.) con un editor de texto como **nano** o **vim** y agregamos a lo ultimo una lineal:
@@ -186,7 +186,7 @@ Linux ya lo trae por defecto, saludos.
      
      ```
 
-![image-20210413232358834](instalacion-compatible.assets/image-20210413232358834.png)
+![image-20210413232358834](readme.assets/image-20210413232358834.png)
 
 ​    
 
@@ -221,11 +221,11 @@ db_gecos: cygwin desc
 
 3. **Mover o Copiar** los archivos de usuario de MSYS2 a los archivos de usuario de Windows, **para combinarlos**.
 
-![image-20210429145412434](instalacion-compatible.assets/image-20210429145412434.png)
+![image-20210429145412434](readme.assets/image-20210429145412434.png)
 
 **Sobre la carpeta de usuario de Windows**
 
-![image-20210429150045602](instalacion-compatible.assets/image-20210429150045602.png)
+![image-20210429150045602](readme.assets/image-20210429150045602.png)
 
 4. Abrir MSYS2 y curiosear a ver si ya se realizo el cambio, cualquier cosa me escriben.
 
