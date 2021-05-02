@@ -94,6 +94,7 @@ El código esta bien, pero es ineficiente tengo que buscar otro método que requ
 
 Este imprime por filas enteras dependiendo de cuantos "fgets(line, 255, fpointer);" escribamos, imprime X fila.
 
+```
 Si escribo 1 solo "fgets(line, 255, fpointer);"" = Imprime la fila de Juan
 
 2 * "fgets(line, 255, fpointer);" = imprime la fila de Pamela
@@ -101,4 +102,5 @@ Si escribo 1 solo "fgets(line, 255, fpointer);"" = Imprime la fila de Juan
 3 * "fgets(line, 255, fpointer);" = imprime la fila de Oscar
 
 4 * "fgets(line, 255, fpointer);" = imprime la fila de Katia
+```
 
