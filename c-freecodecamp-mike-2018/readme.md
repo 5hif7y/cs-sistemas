@@ -2,9 +2,7 @@
 
 reescritos de:
 
-![logo-freecodecamp.org](https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s88-c-k-c0x00ffffff-no-rj)
-
-https://www.youtube.com/watch?v=KJgsSFOSQv0 [freeCodeCamp.org]
+![logo-freecodecamp.org](https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s88-c-k-c0x00ffffff-no-rj) https://www.youtube.com/watch?v=KJgsSFOSQv0 [freeCodeCamp.org]
 
 15 agosto 2018 - Mike Dane
 
