@@ -95,8 +95,9 @@ No recomendable para el caso contrario.
    [... downloading and installation continues ...]
    ```
 
-8. **Ahora MSYS2 esta listo**, solo falta **instalar** algunas herramientas y **gcc de mingw-w64** para poder **compilar**, ejecutar 
-   `pacman -S --needed base-devel mingw-w64-x86_64-toolchain`:
+8. **Ahora MSYS2 esta listo**, solo falta **instalar** algunas herramientas y **gcc de mingw-w64** para poder **compilar**, ejecutar:
+ 
+   `pacman -S --needed base-devel mingw-w64-x86_64-toolchain`
 
    ```
    $ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
