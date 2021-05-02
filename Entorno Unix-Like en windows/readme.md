@@ -1,26 +1,26 @@
-## Instalación de entorno UNiX-Like en Windows
+# Instalación en Linux
 
-Solo recomendable para personas que prefieren una terminal.
-
-No recomendable para el caso contrario.
+Linux ya lo trae por defecto, saludos.
 
 
+
+# Instalación en Windows
 
 1. Descargar el instalador en: https://www.msys2.org/
 
-![image-20210413213532633](readme.assets/image-20210413213532633.png)
+![image-20210413213532633](instalacion-compatible.assets/image-20210413213532633.png)
 
 2. Abrir el instalador. MSYS2 requiere "Windows 7 64 bit" o mas nuevo.
 
 3. Dejar por default o elegir una **Carpeta de instalación** 
 
-   ![Second screen of MSYS2 installation](readme.assets/install-2-path.png)
+   ![Second screen of MSYS2 installation](instalacion-compatible.assets/install-2-path.png)
 
 4. Cuando termine, seleccionar **Run MSYS2 now**.
 
-   ![Third screen of MSYS2 installation](readme.assets/install-3-finish.png)
+   ![Third screen of MSYS2 installation](instalacion-compatible.assets/install-3-finish.png)
 
-5. Actualizar los paquetes y la base de datos, ejecutar
+5. Actualizar los paquetes y la base de datos, ejecutar, cuando termine apretar la tecla **Y** para confirmar la actualización.
     `pacman -Syu`:
 
    ```
@@ -68,7 +68,10 @@ No recomendable para el caso contrario.
    :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
    ```
 
-6. Arrancar "MSYS2 MSYS" desde el menu de inicio. Actualizar el resto de los paquetes con 
+6. Arrancar "**MSYS2 MSYS**" desde el menú de inicio con el logo de Windows que esta a la izquierda. 
+   ![image-20210429142121396](instalacion-compatible.assets/image-20210429142121396.png)
+
+7. **Actualizar el resto** de los paquetes con 
    `pacman -Su`:
 
    ```
@@ -90,7 +93,7 @@ No recomendable para el caso contrario.
    [... downloading and installation continues ...]
    ```
 
-7. Ahora MSYS2 esta listo, solo falta instalar algunas herramientas y gcc de mingw-w64 para empezar a compilar:
+8. **Ahora MSYS2 esta listo**, solo falta **instalar** algunas herramientas y **gcc de mingw-w64** para poder **compilar**, ejecutar `pacman -S --needed base-devel mingw-w64-x86_64-toolchain`:
 
    ```
    $ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
@@ -133,22 +136,104 @@ No recomendable para el caso contrario.
    [... downloading and installation continues ...]
    ```
 
-8. Para empezar a usar GCC de mingw-w64, cierre esta terminal y ejecute "MSYS MinGW 64-bit" desde el menú de inicio. Ahora podes ejecutar `make` o `gcc` para compilar software en Windows.
-   
-** error me confundi de archivo **
+9. Para empezar a usar **GCC de mingw-w64**, cierre esta terminal y ejecute "**MSYS MinGW 64-bit**" desde el menú de inicio. Ahora podes ejecutar `make` o `gcc` para compilar software en Windows. **A partir de ahora solo deberemos usar MSYS MinGW 64-bit, se preferencia dejen un acceso directo en el escritorio**.
 
-11. **Configurar la shell**: la shell que vamos a usar es **bash** y para poder configurarla **ejecutamos Alacritty** que sera nuestra terminal a partir de ahora, y abrimos el archivo **.bashrc** (si, el nombre comienza con un punto y tiene una razón) con un editor de texto como **nano** o **vim** y agregamos a lo ultimo una linea:
-    ```export PATH="C:\msys64\mingw64\bin\:$PATH"```
+10. **Entender el editor de texto**, yo tengo preferencia por **vim**, por la cantidad de horas que puede ahorrar, pero tiene una curva de aprendizaje muy alta. También pueden usar **nano** que ya viene instalado por defecto.
 
-![image-20210413232358834](readme.assets/image-20210413232358834.png)
+    ![image-20210429151601673](instalacion-compatible.assets/image-20210429151601673.png)![image-20210429151746057](instalacion-compatible.assets/image-20210429151746057.png)
+    Se escribe y borra como en cualquier editor de texto, como el block de notas, se guarda con **Control + O**, se cancela con **Control + C** y se sale con **Control + X**, pero como ya te habrás dado cuenta, nano viene con las instrucciones impresas abajo de todo donde **^ significa Control**.
+    
+11. **Configurar la shell**: la shell que vamos a usar es **bash** y para poder configurarla vamos a editar nuestro archivo de configuración **.bashrc** (si, el nombre comienza con un punto y tiene una razón; la mayoría de archivos de configuración empiezan con un punto y de denominan "**dotfiles**", archivos de punto.) con un editor de texto como **nano** o **vim** y agregamos a lo ultimo una lineal:
+
+     ```shell
+     #
+     #   #
+     #   # Remove any other occurence of this dir, skipping the top of the stack
+     #   for ((cnt=1; cnt <= 10; cnt++)); do
+     #     x2=$(dirs +${cnt} 2>/dev/null)
+     #     [[ $? -ne 0 ]] && return 0
+     #     [[ ${x2:0:1} == '~' ]] && x2="${HOME}${x2:1}"
+     #     if [[ "${x2}" == "${the_new_dir}" ]]; then
+     #       popd -n +$cnt 2>/dev/null 1>/dev/null
+     #       cnt=cnt-1
+     #     fi
+     #   done
+     #
+     #   return 0
+     # }
+     #
+     # alias cd=cd_func
+     
+     # Vamos a hacer un camino para conectar los archivos ejecutables a nuestra terminal
+     # El "encaminamiento tiene este formato"
+     
+     # export PATH="Carpeta\Con\Archivos\ejecutables:$PATH"   # En español seria algo como "Exportar CAMINO='DIRECCION\$:CAMINO'"
+     
+     # Hacemos un camino a los archivos de los subsistemas
+     export PATH="C:\msys64\mingw64\bin\:$PATH" # Entorno de 64bits
+     export PATH="C:\msys64\usr\bin\:$PATH" # Entorno principal
+     
+     # High Level Assembly PATH # Esto es lo que yo personalmente voy a usar para aprender ensamblador
+     export PATH="C:\hla\:$PATH"
+     
+     # Aca conecto la terminal a mis ejecutables personales, calculadoras, editores, monitores, etc.
+     # export PATH="C:\tools\:$PATH"
+     
+     # Hasta podes conectar zoom, pero es poco practico y molesto, solo lo hago de demostración
+     # export PATH="%APPDATA%\Zoom\bin:$PATH" # Para el usuario actual que estes usando
+     # export PATH="C:\Users\TU-USUARIO\AppData\Roaming\Zoom\bin\:$PATH" # Para un usuario concreto
+     
+     
+     ```
+
+![image-20210413232358834](instalacion-compatible.assets/image-20210413232358834.png)
 
 ​    
 
-Lea la [pagina de intruduccion](https://www.msys2.org/wiki/MSYS2-introduction/) para aprender cual ítem del **Menú de Inicio** usar y cuales paquetes instalar. Vea la [guia detallada de instalacion de MSYS2](https://www.msys2.org/wiki/MSYS2-installation/) para solucionar problemas y detalles adicionales sobre como mantener actualizado MSYS2.
+Con esto ya esta terminado todo el entorno de programación.
+
+Lea la [pagina de introducción](https://www.msys2.org/wiki/MSYS2-introduction/) para aprender cual ítem del **Menú de Inicio** usar y cuales paquetes instalar. Vea la [guía detallada de instalación de MSYS2](https://www.msys2.org/wiki/MSYS2-installation/) para solucionar problemas y detalles adicionales sobre como mantener actualizado MSYS2.
 
 
 
-### Como usar los comandos para compilar codigo C:
+### Extra: Cambiar la carpeta de inicio HOME a la carpeta HOME nativa de Windows
+
+1.  **Localizar** el archivo **nsswitch.conf** en la carpeta "/etc" del entorno de msys2. Para entrar directo de Windows esta en la carpeta "C:\msys64\etc".
+2.  **Comentar** la variable "**db_home: cygwin desc**" con un **#** (numeral) y reescribirla como "**db_home: windows**". Si prefiere reemplácela completamente.
+
+
+
+```
+# Begin /etc/nsswitch.conf
+
+passwd: files db
+group: files db
+
+db_enum: cache builtin
+
+#db_home: cygwin desc
+db_home: windows
+db_shell: cygwin desc
+db_gecos: cygwin desc
+
+# End /etc/nsswitch.conf}}
+```
+
+3. **Mover o Copiar** los archivos de usuario de MSYS2 a los archivos de usuario de Windows, **para combinarlos**.
+
+![image-20210429145412434](instalacion-compatible.assets/image-20210429145412434.png)
+
+**Sobre la carpeta de usuario de Windows**
+
+![image-20210429150045602](instalacion-compatible.assets/image-20210429150045602.png)
+
+4. Abrir MSYS2 y curiosear a ver si ya se realizo el cambio, cualquier cosa me escriben.
+
+# Tutorial de C
+
+### Como usar los comandos:
+
+
 
 Se edita archivos con:
 
@@ -156,12 +241,40 @@ Se edita archivos con:
 o 
 **nano** nombre-del-archivo**.c** 
 
+
+
 Se compila archivos con:
 **gcc** nombre-del-archivo**.c** -o nombre-del-ejecutable**.exe**
 
 Existe una forma ya automatizada para compilar, esto busca automáticamente el archivo con el nombre terminado en .c y devuelve un archivo .exe
 
-**make** *nombre-del-archivo*
 
-Se ejecutan con:
+
+**make** *nombre-del-archivo-sin-.-formato*
+
+Ej:
+
+"make fulano" **make busca** un archivo que se llame fulano y termine en **.c**, se lo pasa al **compilador gcc** y te devuelve un .exe
+
+Al .exe lo ejecutan desde la terminal con:
+
+
+
 **./**nombre-del-ejecutable**.exe**
+
+
+
+### Como introducirte al lenguaje C
+
+1. Ver cualquier tutorial de lenguaje C, como imprimir un mensaje que diga "hello world" y cosas basicas
+
+   A mi me gusto este de FreeCodeCamp.org, pero esta en ingles:
+
+   Ignorar la primera parte del tutorial, donde se enseña a instalar otros entornos de programación.
+
+   https://www.youtube.com/watch?v=KJgsSFOSQv0&t=544s
+
+
+
+2. **Leer los manuales ofrecidos por la catedra**
+
