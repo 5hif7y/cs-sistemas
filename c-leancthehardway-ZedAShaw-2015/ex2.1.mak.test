@@ -1,0 +1,18 @@
+ifeq ($(OS),Windows_NT) 
+RM = del /Q /F
+CP = copy /Y
+ifdef ComSpec
+SHELL := $(ComSpec)
+endif
+ifdef COMSPEC
+SHELL := $(COMSPEC)
+endif
+else
+RM = rm -rf
+CP = cp -f
+endif
+
+FLAGS=-Wall	-g
+
+clean:
+	-rm -f ex1.exe
