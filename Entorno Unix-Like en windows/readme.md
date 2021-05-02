@@ -135,19 +135,7 @@ No recomendable para el caso contrario.
 
 8. Para empezar a usar GCC de mingw-w64, cierre esta terminal y ejecute "MSYS MinGW 64-bit" desde el menú de inicio. Ahora podes ejecutar `make` o `gcc` para compilar software en Windows.
    
-9. **Descargar e instalar Alacritty** en https://github.com/alacritty/alacritty/releases el archivo Alacritty-vX.X.X-installer.msi (X es la versión) más nuevo, es decir el primero ya que esta listado en orden decreciente.
-
-10. **Configurar Alacritty**: el archivo que Alacritty busca como su archivo de configuración se debe encontrar en **%APPDATA%\alacritty\alacritty.yml** pero la instalación no crea esta carpeta y archivo, debemos crearlos nosotros mismos por lo tanto debemos ir a la carpeta **%APPDATA%** , **crear** una carpeta llamada **alacritty** y dentro de la carpeta un archivo que se llame **alacritty.yml** con el siguiente contenido (copiar y pegar):
-```
-enable_experimental_conpty_backend: true
-# add some transparency
-background_opacity: 0.75
-
-shell:
-  program: C:\msys64\usr\bin\bash.exe
-  args:
-  - --login
-```
+** error me confundi de archivo **
 
 11. **Configurar la shell**: la shell que vamos a usar es **bash** y para poder configurarla **ejecutamos Alacritty** que sera nuestra terminal a partir de ahora, y abrimos el archivo **.bashrc** (si, el nombre comienza con un punto y tiene una razón) con un editor de texto como **nano** o **vim** y agregamos a lo ultimo una linea:
     ```export PATH="C:\msys64\mingw64\bin\:$PATH"```
