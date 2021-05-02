@@ -6,7 +6,7 @@ https://www.youtube.com/playlist?list=PLetF-YjXm-sCH6FrTz4AQhfH6INDQvQSn
 
 nasm -f elf64 -o hello.o hello.asm
 
-nasm -f tipodearchivo archivo de entrada -o archivo-de-salida.obj
+nasm -f tipodearchivo archivo-de-entrada.asm -o archivo-de-salida.obj
 
 nasm -f FILETYPE -o OUTPUTFILE INPUTFILE
 
