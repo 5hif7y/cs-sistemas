@@ -2,9 +2,11 @@
 
 Linux ya lo trae por defecto, saludos.
 
-
-
 # Instalación en Windows
+
+Solo recomendable para usuarios avanzados que prefieren una terminal.
+
+No recomendable para el caso contrario.
 
 1. Descargar el instalador en: https://www.msys2.org/
 
